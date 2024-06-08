@@ -223,41 +223,41 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
 }
 h1 {
-  font-size: 64px;
+  font-size: 4rem;
   line-height: 1;
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 4px;
 }
 h1.sub {
-  font-size: 54px;
+  font-size: 3.4rem;
 }
 h2 {
-  font-size: 56px;
+  font-size: 3.4rem;
   line-height: 1;
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 4px;
 }
 h2.sub {
-  font-size: 45px;
+  font-size: 2.8rem;
 }
 h3 {
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 4px;
-  margin-bottom: 0;
+  margin: 0;
 }
 #buy h3 {
   margin-top: 50px;
 }
 h4 {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin-bottom: 0;
+  margin: 0;
   color: #0057FF;
 }
 p {
@@ -321,7 +321,7 @@ a.button {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 16px;
+  font-size: 1rem;
 }
 #next article div {
     margin-top: 50px;
@@ -413,8 +413,207 @@ a.button:hover {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+@media only screen and (max-width: 500px) {
+  /***** general *****/
+* {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+.right {
+  margin-right: 25px;
+  margin-left: 50px;
+}
+.left {
+  margin-right: 50px;
+  margin-left: 25px;
+}
+/***** layout *****/
+#buy {
+  margin: 25px;
+  padding: 25px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto auto;
+}
+#buy:after {
+  top: 5px;
+  left: 5px;
+}
+#buy article {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  padding: 0;
+  text-align: center;
+}
+#buy aside {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin: 0;
+}
+#about {
+  padding: 50px 25px;
+  margin: 50px 0;
+  grid-template-columns: repeat(1, 1fr);
+}
+#about article {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+#author {
+  margin: 25px;
+  grid-template-columns: repeat(1, 1fr);
+}
+#author aside {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+#author article {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  padding: 5px 0 50px;
+}
+#next {
+  margin: 25px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto auto;
+}
+#next article {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  margin: 15px 0 50px 0;
+  padding: 0;
+}
+#next aside {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  padding: 50px 0 0 0;
+}
+
+
+/***** type *****/
+html {
+  font-size: 12px;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+}
+h1 {
+  font-size: 4.4rem;
+  line-height: 1;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+h1.sub {
+  font-size: 3.4rem;
+}
+h2 {
+  font-size: 3.4rem;
+  line-height: 1;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+h2.sub {
+  font-size: 2.8rem;
+}
+h3 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin: 0;
+}
+#buy h3 {
+  margin-top: 50px;
+}
+h4 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+  color: #0057FF;
+}
+p {
+  font-size: 1.3rem;
+/*  margin: 0 0 25px 0;*/
+}
+header p {
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+footer p {
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  color: white;
+}
+.bold {
+  font-weight: 800;
+}
+
+
+/***** lists & buttons *****/
+#buy ul {
+  margin: 0;
+  padding: 0;
+}
+#buy li {
+  font-size: 1.3rem;
+  margin: 15px 25px;
+  padding: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  float: none;
+}
+
+
+/***** links *****/
+#buy li a {
+  color: #1E1E1E;
+  text-decoration: none;
+  font-weight: 800;
+  border-bottom: 3px solid #0057FF;
+}
+#buy li a:hover {
+  border-bottom: 3px solid #FFCC4B;
+}
+a.button {
+  background: white;
+  border: 3px solid #1e1e1e;
+  padding: 10px 15px;
+  color: #1E1E1E;
+  text-decoration: none;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 16px;
+}
+#next article div {
+    margin-top: 50px;
+}
+a.button:hover {
+  background: #FFCC4B;
+}
 }
 
 @media print,
