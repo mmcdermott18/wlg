@@ -413,15 +413,6 @@ a.button:hover {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (max-width: 400px) {
-  h1 {
-    font-size: 4rem;
-    line-height: 1;
-    margin: 0;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-  }
-}
 @media only screen and (max-width: 500px) {
   /***** general *****/
 * {
@@ -506,6 +497,9 @@ img {
   grid-row-end: 2;
   padding: 50px 0 0 0;
 }
+#next aside div {
+  height: 500px;
+}
 
 
 /***** type *****/
@@ -516,7 +510,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
 }
 h1 {
-  font-size: 4.4rem;
+  font-size: 4rem;
   line-height: 1;
   margin: 0;
   text-transform: uppercase;
@@ -624,7 +618,30 @@ a.button:hover {
   background: #FFCC4B;
 }
 }
-
+@media only screen and (max-width: 400px) {
+  #buy {
+    margin: 25px;
+    padding: 0;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto auto;
+    border: none;
+  }
+  #buy:after {
+    top: 0;
+    left: 0;
+    border: none;
+  }
+  h1 {
+    font-size: 3.2rem;
+    line-height: 1;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+  h1.sub {
+    font-size: 2.8rem;
+  }
+}
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
   (min-resolution: 1.25dppx),
