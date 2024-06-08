@@ -413,6 +413,15 @@ a.button:hover {
    Modify as content requires.
    ========================================================================== */
 
+@media only screen and (max-width: 400px) {
+  h1 {
+    font-size: 4rem;
+    line-height: 1;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+}
 @media only screen and (max-width: 500px) {
   /***** general *****/
 * {
