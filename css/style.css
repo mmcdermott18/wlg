@@ -91,7 +91,7 @@ textarea {
     red: #FF3D3D
     yellow: #FFCC4B
     blue: #0057FF
-    light grey: #D9D9D9;
+    light grey: #D9D9D9
 
 
    ====== */
@@ -747,6 +747,7 @@ a.button:hover {
     grid-column-start: 2;
     grid-column-end: 5;
     padding: 0;
+    margin-top: 0;
   }
   #next {
     margin: 50px;
