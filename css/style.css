@@ -333,7 +333,7 @@ footer p {
 #buy li a:hover {
   border-bottom: 3px solid #FFCC4B;
 }
-a.button {
+a.button, input.button {
   background: white;
   border: 3px solid #1e1e1e;
   padding: 10px 15px;
@@ -344,12 +344,38 @@ a.button {
   letter-spacing: 2px;
   font-size: 1rem;
 }
-#next article div {
+#next article .signup {
     margin-top: 50px;
 }
 a.button:hover {
   background: #FFCC4B;
 }
+
+/***** form *****/
+label {
+  display: block;
+  margin: 15px 0 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1rem;
+}
+input {
+  margin: 0;
+  width: 50%;
+  border: 2px solid black;
+  font-size: 1.2rem;
+  padding: 5px 7px;
+}
+input.button {
+  width: initial;
+  margin: 25px 0 0 0;
+}
+.indicates-required, .asterisk {
+  color: #FF3D3D;
+  font-weight: 500;
+}
+
 
 /* ==========================================================================
    Helper classes
