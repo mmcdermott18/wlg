@@ -118,7 +118,7 @@ hr {
 }
 #next aside div hr {
   border-bottom: 3px solid white;
-  margin: 25px 0;
+  margin: 20px 5px;
 }
 
 
@@ -138,7 +138,18 @@ header {
 section {
 
 }
-#buy {
+.announcement {
+  padding: 20px;
+  text-align: center;
+  background-color: #FF3D3D;
+  color: white;
+}
+.announcement p a {
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+#buy, #book-two {
   margin: 100px;
 /*  padding: 50px;*/
   border: 10px solid #FFCC4B;
@@ -149,7 +160,7 @@ section {
   gap: 20px;
 
 }
-#buy:after {
+#buy:after, #book-two:after {
   content: "";
   position: absolute;
   width: 100%;
@@ -165,9 +176,20 @@ section {
   padding: 100px 0 50px;
   text-align: center;
 }
+#book-two article {
+  grid-column-start: 6;
+  grid-column-end: 12;
+  padding: 100px 0 50px;
+  text-align: center;
+}
 #buy aside {
   grid-column-start: 9;
   grid-column-end: 12;
+  margin: -50px 0;
+}
+#book-two aside {
+  grid-column-start: 2;
+  grid-column-end: 5;
   margin: -50px 0;
 }
 #about {
@@ -257,7 +279,7 @@ h3 {
   margin: 0;
   line-height: 1.2;
 }
-#buy h3 {
+#buy h3, #book-two h3 {
   margin-top: 50px;
 }
 h4 {
@@ -309,28 +331,33 @@ footer p {
 
 
 /***** lists & buttons *****/
-#buy ul {
+#buy ul, #book-two ul {
   margin: 0;
   padding: 0 50px;
   list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-#buy li {
-  margin: 15px 25px;
+#buy li, #book-two li {
+  margin: 10px 25px;
   padding: 0;
   text-transform: uppercase;
   letter-spacing: 1px;
-  float: left;
+/*  float: left;*/
+  display: flex;
+  vertical-align: middle;
 }
 
 
 /***** links *****/
-#buy li a {
+#buy li a, #book-two li a {
   color: #1E1E1E;
   text-decoration: none;
   font-weight: 800;
   border-bottom: 3px solid #0057FF;
 }
-#buy li a:hover {
+#buy li a:hover, #book-two li a:hover {
   border-bottom: 3px solid #FFCC4B;
 }
 a.button, input.button {
@@ -347,8 +374,13 @@ a.button, input.button {
 #next article .signup {
     margin-top: 50px;
 }
-a.button:hover {
+input.button {
+  border-width: 2px;
+}
+a.button:hover, input.button:hover {
   background: #FFCC4B;
+  cursor: pointer;
+  transition: background 1s ease;
 }
 
 /***** form *****/
@@ -490,7 +522,7 @@ input.button {
 @media only screen and (max-width: 1650px) {
   /***** layout *****/
  
-  #buy {
+  #buy, #book-two {
     padding: 25px;
   }
   #buy article {
@@ -504,11 +536,22 @@ input.button {
     grid-column-end: 13;
     margin: -75px 0 -100px;
   }
+  #book-two article {
+    grid-column-start: 5;
+    grid-column-end: 13;
+    margin-top: 0;
+    padding: 25px 0;
+  }
+  #book-two aside {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    margin: -75px 0 -100px;
+  }
 }
 @media only screen and (max-width: 1400px) {
   /***** layout *****/
  
-  #buy {
+  #buy, #book-two {
     padding: 25px;
     grid-template-columns: repeat(10, 1fr);
   }
@@ -520,6 +563,16 @@ input.button {
   #buy aside {
     grid-column-start: 7;
     grid-column-end: 11;
+    margin: -100px 0;
+  }
+  #book-two article {
+    grid-column-start: 5;
+    grid-column-end: 11;
+    margin-top: 2vw;
+  }
+  #book-two aside {
+    grid-column-start: 1;
+    grid-column-end: 5;
     margin: -100px 0;
   }
   #about {
@@ -583,10 +636,10 @@ input.button {
   }
 
   /***** lists & buttons *****/
-  #buy ul {
+  #buy ul, #book-two ul {
     padding: 0;
   }
-  #buy li {
+  #buy li, #book-two li {
       margin: 10px 15px;
   }
 }
@@ -601,7 +654,7 @@ input.button {
   }
   /***** layout *****/
  
-  #buy {
+  #buy, #book-two {
     margin: 100px 50px;
     padding: 25px;
     grid-template-columns: repeat(10, 1fr);
@@ -616,6 +669,19 @@ input.button {
   #buy aside {
     grid-column-start: 7;
     grid-column-end: 11;
+    margin: -100px 0;
+    text-align: center;
+  }
+  #book-two article {
+    grid-column-start: 5;
+    grid-column-end: 11;
+    padding: 0;
+    text-align: center;
+    margin-top: 5vw;
+  }
+  #book-two aside {
+    grid-column-start: 1;
+    grid-column-end: 5;
     margin: -100px 0;
     text-align: center;
   }
@@ -685,15 +751,15 @@ input.button {
   }
 
   /***** lists & buttons *****/
-  #buy ul {
+  #buy ul, #book-two ul {
     padding: 0;
   }
-  #buy li {
+  #buy li, #book-two li {
       margin: 10px 15px;
   }
 }
 @media only screen and (max-width: 1100px) {
-  #buy {
+  #buy, #book-two {
     margin: 50px;
     padding: 25px;
     grid-template-columns: repeat(4, 1fr);
@@ -711,7 +777,20 @@ input.button {
     margin: 0;
     text-align: center;
   }
-  #buy aside img {
+  #book-two article {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    padding: 0;
+    text-align: center;
+    margin-top: 5vw;
+  }
+  #book-two aside {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin: 0;
+    text-align: center;
+  }
+  #buy aside img, #book-two aside img {
     max-height: 500px;
   }
 }
@@ -726,7 +805,7 @@ input.button {
   }
   /***** layout *****/
  
-  #buy {
+  #buy, #book-two {
     margin: 50px;
     padding: 25px;
     grid-template-columns: repeat(1, 1fr);
@@ -749,7 +828,23 @@ input.button {
     margin: 0;
     text-align: center;
   }
-  #buy aside img {
+  #book-two article {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    padding: 0;
+    text-align: center;
+  }
+  #book-two aside {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin: 0;
+    text-align: center;
+  }
+  #buy aside img, #book-two aside img {
     max-height: 500px;
   }
   #about {
@@ -821,11 +916,14 @@ input.button {
   }
 
   /***** lists & buttons *****/
-  #buy ul {
+  #buy ul, #book-two ul {
     padding: 0;
+    display: block;
+    text-align: center;
   }
-  #buy li {
+  #buy li, #book-two li {
     margin: 15px 25px;
+    display: block;
   }
 }
 @media only screen and (max-width: 650px) {
@@ -859,10 +957,10 @@ input.button {
     margin-left: 25px;
   }
   /***** layout *****/
-  #buy {
+  #buy, #book-two {
     margin: 25px;
   }
-  #buy:after {
+  #buy:after, #book-two:after {
     top: 5px;
     left: 5px;
   }
@@ -926,11 +1024,11 @@ input.button {
 
 
   /***** lists & buttons *****/
-  #buy ul {
+  #buy ul, #book-two ul {
     margin: 0;
     padding: 0;
   }
-  #buy li {
+  #buy li, #book-two li {
     font-size: 1.3rem;
     margin: 15px 25px;
     padding: 0;
@@ -938,14 +1036,14 @@ input.button {
   }
 }
 @media only screen and (max-width: 400px) {
-  #buy {
+  #buy, #book-two {
     margin: 25px;
     padding: 0;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: auto auto;
     border: none;
   }
-  #buy:after {
+  #buy:after, #book-two:after {
     top: 0;
     left: 0;
     border: none;
